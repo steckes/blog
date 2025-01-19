@@ -1,3 +1,77 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://steck.tech/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Stephan Eckes'
+theme = 'typo'
+
+[taxonomies]
+tag = 'tags'
+
+[params]
+# Meta description
+description = "A Tech Blog"
+showFooter = true
+footerContent = "**Stephan Eckes** &copy; 2025"
+
+# Appearance settings
+theme = 'auto'
+colorPalette = 'default'
+hideHeader = false
+
+# Intro on main page, content is markdown
+homeIntroTitle = 'Hello! 👋'
+homeIntroContent = """
+I’m a systems developer based in Berlin, with a passion for exploring new programming
+languages like Rust and Zig. My background in music technology means I often write
+with use cases in audio programming. While my focus is on modern, efficient code,
+you’ll also find occasional posts about C++ and Python—because sometimes, there’s no
+escaping them!
+"""
+
+# Collection to display on home
+homeCollectionTitle = 'Posts'
+homeCollection = 'posts'
+
+# Lists parameters
+paginationSize = 100
+listSummaries = true
+listDateFormat = '2 Jan 2006'
+
+# Breadcrumbs
+breadcrumbs = true
+
+# Social icons
+[[params.social]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/stephan-eckes/"
+
+[[params.social]]
+name = "github"
+url = "https://github.com/steckes"
+
+# Main menu pages
+[[params.menu]]
+name = "home"
+url = "/"
+
+[[params.menu]]
+name = "posts"
+url = "/posts"
+
+[[params.menu]]
+name = "about"
+url = "/about"
+
+# Syntax highlight on code blocks
+[markup]
+[markup.highlight]
+style = 'algol'
+
+# Giscus comments
+[params.giscus]
+enable = false
+repo = "user/repo"
+repoid = "repoId"
+category = "General"
+categoryid = "categoryId"
+mapping = "pathname"
+theme = "preferred_color_scheme"
