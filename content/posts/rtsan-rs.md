@@ -1,6 +1,6 @@
 ---
 title: "Bringing RealtimeSanitizer to Rust"
-date: "2025-01-20"
+date: "2025-01-19"
 summary: "A guide to integrating LLVM's RealtimeSanitizer in Rust applications."
 description: "Learn how to detect and prevent real-time violations in Rust using RTSan, a powerful tool for real-time programming."
 toc: false
@@ -46,7 +46,7 @@ While these attributes could be added to unstable Rust (similar to the current [
 
 ## The Implementation
 
-The implementation was straightforward thanks to Dave and Chris's existing [C-Header](https://github.com/realtime-sanitizer/rtsan/blob/main/include/rtsan_standalone/rtsan_standalone.h), which provides runtime functions to control the sanitizer.
+The implementation was straightforward thanks to David and Chris's existing [C-Header](https://github.com/realtime-sanitizer/rtsan/blob/main/include/rtsan_standalone/rtsan_standalone.h), which provides runtime functions to control the sanitizer.
 
 The Rust wrapper consists of three crates:
 
