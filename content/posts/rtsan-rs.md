@@ -46,7 +46,7 @@ While these attributes could be added to unstable Rust (similar to the current [
 
 ## The Implementation
 
-The implementation was straightforward thanks to David and Chris's existing [C-Header](https://github.com/realtime-sanitizer/rtsan/blob/main/include/rtsan_standalone/rtsan_standalone.h), which provides runtime functions to control the sanitizer.
+The implementation was straightforward thanks to the existing [C-Header](https://github.com/realtime-sanitizer/rtsan/blob/main/include/rtsan_standalone/rtsan_standalone.h), which provides runtime functions to control the sanitizer.
 
 The Rust wrapper consists of three crates:
 
