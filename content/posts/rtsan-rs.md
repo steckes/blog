@@ -1,6 +1,6 @@
 ---
 title: "Bringing RealtimeSanitizer to Rust"
-date: "2023-11-12"
+date: "2025-01-20"
 summary: "A guide to integrating LLVM's RealtimeSanitizer in Rust applications."
 description: "Learn how to detect and prevent real-time violations in Rust using RTSan, a powerful tool for real-time programming."
 toc: false
@@ -30,7 +30,7 @@ Real-time requirements are also crucial in aerospace, robotics, industrial autom
 
 Real-time safe code requires predictable execution time for every line of code. You can't block execution waiting for operations outside your control. This rules out network requests, file I/O, thread creation, memory allocation/deallocation, and often mutex locking and unlocking.
 
-While these constraints might seem manageable when working with basic language features, even standard library functions can cause headaches - leading to lengthy discussions and conference talks. Beyond the standard library, using third-party code becomes risky without thorough code review, as you can't be certain what happens under the hood of each function call.
+While these constraints might seem manageable when working with basic language features, even standard library functions can cause headaches - enough to inspire entire [conference talks](https://www.youtube.com/watch?v=vn7563IAQ_E). Beyond the standard library, using third-party code becomes risky without thorough code review, as you can't be certain what happens under the hood of each function call.
 
 ## How RTSan Works
 
