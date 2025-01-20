@@ -1,7 +1,7 @@
 ---
-title: "Bringing RealtimeSanitizer to Rust"
+title: "Introducing RealtimeSanitizer for Rust"
 date: "2025-01-20"
-summary: "The path toward integrating LLVM's RealtimeSanitizer into Rust and how to use it now"
+summary: "How to use LLVM's RealtimeSanitizer in Rust today and the path towards integration into Rust"
 description: "This post explores the path toward integrating LLVM's RealtimeSanitizer into Rust and introduces a crate enabling its use now"
 toc: false
 readTime: true
