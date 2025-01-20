@@ -1,10 +1,10 @@
 ---
 title: "Bringing RealtimeSanitizer to Rust"
 date: "2025-01-19"
-summary: "A guide to integrating LLVM's RealtimeSanitizer in Rust applications."
-description: "Learn how to detect and prevent real-time violations in Rust using RTSan, a powerful tool for real-time programming."
+summary: "The path toward integrating LLVM's RealtimeSanitizer into Rust and how to use it now"
+description: "This post explores the path toward integrating LLVM's RealtimeSanitizer into Rust and introduces a crate enabling its use now"
 toc: false
-readTime: true
+readTime: trueq
 autonumber: false
 math: false
 tags: ["rust", "rtsan"]
@@ -16,7 +16,7 @@ A few months ago, I gave my first talk about Rust for audio apps at [AudioDevCon
 
 At the time, RTSan was only available for C++, and they were looking for someone to help make it accessible from Rust, given the growing interest in the community. Since this tool would be valuable for my daily work, I saw it as an opportunity to learn and create my first serious open source library. I took on the challenge, and now the first version is available!
 
-> **Source Code:** [https://github.com/realtime-sanitizer/rtsan-standalone-rs](https://github.com/realtime-sanitizer/rtsan-standalone-rs)
+> **Test it now:** [https://github.com/realtime-sanitizer/rtsan-standalone-rs](https://github.com/realtime-sanitizer/rtsan-standalone-rs)
 
 ## Understanding Real-time Constraints
 
@@ -105,10 +105,16 @@ Check the examples for additional features:
 - `no_sanitize_realtime` disables checks for entire functions
 - RTSan behavior can be customized via [runtime flags](https://clang.llvm.org/docs/RealtimeSanitizer.html#run-time-flags)
 
+## Learn more
+
+- **GitHub Repository:** [https://github.com/realtime-sanitizer/rtsan-standalone-rs](https://github.com/realtime-sanitizer/rtsan-standalone-rs)
+- **Original RTSan:** [https://github.com/realtime-sanitizer/rtsan](https://github.com/realtime-sanitizer/rtsan)
+- **Official Documentation:** [https://clang.llvm.org/docs/RealtimeSanitizer.html](https://clang.llvm.org/docs/RealtimeSanitizer.html)
+- **CppCon Talk:** [https://www.youtube.com/watch?v=KvhgNdxX6Uw&t=2478s](https://www.youtube.com/watch?v=KvhgNdxX6Uw&t=2478s)
+
 ## Get Involved
 
-Thanks for reading! If you want to contribute or provide feedback:
+We'd love your feedback and contributions!
 
 - **Discord:** [RealtimeSanitizer (RTSan)](https://discord.com/invite/DZqjbmSZzZ)
 - **Email:** [realtime.sanitizer@gmail.com](mailto:realtime.sanitizer@gmail.com)
-- **GitHub Issues:** [Submit queries or suggestions](https://github.com/realtime-sanitizer/rtsan-standalone-rs)
