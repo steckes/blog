@@ -1,6 +1,6 @@
 baseURL = 'https://steck.tech/'
 languageCode = 'en-us'
-title = 'Stephan Eckes'
+title = 'steck.tech'
 theme = 'typo'
 
 [taxonomies]
@@ -8,7 +8,7 @@ tag = 'tags'
 
 [params]
 # Meta description
-description = "A Tech Blog"
+description = "A Tech Blog by Stephan Eckes"
 showFooter = true
 footerContent = "**Stephan Eckes** &copy; 2025"
 
@@ -20,9 +20,9 @@ hideHeader = false
 # Intro on main page, content is markdown
 homeIntroTitle = 'Hello! 👋'
 homeIntroContent = """
-I’m a systems developer based in Berlin, with a passion for exploring new programming
-languages like Rust and Zig. My background in music technology means I often write
-with use cases in audio programming. While my focus is on modern, efficient code,
+I’m Stephan Eckes - a systems developer based in Berlin, with a passion for exploring new programming
+languages like Rust and Zig. My background in audio technology means I often write
+with use cases in audio programming. While my focus is on modern languages,
 you’ll also find occasional posts about C++ and Python—because sometimes, there’s no
 escaping them!
 """
