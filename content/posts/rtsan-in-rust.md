@@ -1,10 +1,10 @@
 ---
 title: "Bringing RealtimeSanitizer to Rust"
-date: "2025-01-19"
+date: "2025-01-20"
 summary: "The path toward integrating LLVM's RealtimeSanitizer into Rust and how to use it now"
 description: "This post explores the path toward integrating LLVM's RealtimeSanitizer into Rust and introduces a crate enabling its use now"
 toc: false
-readTime: trueq
+readTime: true
 autonumber: false
 math: false
 tags: ["rust", "rtsan"]
@@ -16,7 +16,9 @@ A few months ago, I gave my first talk about Rust for audio apps at [AudioDevCon
 
 At the time, RTSan was only available for C++, and they were looking for someone to help make it accessible from Rust, given the growing interest in the community. Since this tool would be valuable for my daily work, I saw it as an opportunity to learn and create my first serious open source library. I took on the challenge, and now the first version is available!
 
-> **Test it now:** [https://github.com/realtime-sanitizer/rtsan-standalone-rs](https://github.com/realtime-sanitizer/rtsan-standalone-rs)
+### Test it now
+- **GitHub:** [https://github.com/realtime-sanitizer/rtsan-standalone-rs](https://github.com/realtime-sanitizer/rtsan-standalone-rs)
+- **crates.io:** [https://crates.io/crates/rtsan-standalone](https://crates.io/crates/rtsan-standalone)
 
 ## Understanding Real-time Constraints
 
