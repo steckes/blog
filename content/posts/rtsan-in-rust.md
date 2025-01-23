@@ -94,7 +94,20 @@ Intercepted call to real-time unsafe function calloc in real-time context!
 
 ## Special Case: Mutex
 
-An interesting discovery was the different mutex implementations between Linux and macOS. On macOS, mutex operations use pthread_mutex_* calls, with the first lock operation triggering an allocation. Setting `RTSAN_OPTIONS=halt_on_error=false` reveals the sequence: alloc, lock, then free on unlock.
+An interesting discovery was the different mutex implementations between Linux and macOS. On macOS, mutex operations use `pthread_mutex_*` calls, with the first lock operation triggering an allocation. Setting `RTSAN_OPTIONS=halt_on_error=false` reveals the full sequence:
+
+```sh
+$ RTSAN_OPTIONS=halt_on_error=false cargo run --example mutex --features enable
+
+==2083==ERROR: RealtimeSanitizer: unsafe-library-call
+Intercepted call to real-time unsafe function `calloc` in real-time context!
+
+==8716==ERROR: RealtimeSanitizer: unsafe-library-call
+Intercepted call to real-time unsafe function `pthread_mutex_lock` in real-time context!
+
+==8716==ERROR: RealtimeSanitizer: unsafe-library-call
+Intercepted call to real-time unsafe function `pthread_mutex_unlock` in real-time context!
+```
 
 Linux uses a futex-based implementation with a CAS loop for lock attempts. It first spins for a limited cycle count before falling back to a system call. RTSan only detects the Linux implementation when it resorts to the system call. While using such a mutex in real-time contexts might be acceptable if the system call is avoided, this ventures into complex lock-free programming territory that's beyond my current expertise. If you're knowledgeable about Linux mutex implementation, I'd love to hear your thoughts.
 
